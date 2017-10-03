@@ -1,7 +1,7 @@
 package com.example.shengsheng.uibestpractice;
 
 import android.support.constraint.solver.LinearSystem;
-import android.support.v7.app.AlertController.RecycleListView;
+import android.support.v7.app.RecyclerView;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -14,9 +14,9 @@ import java.util.List;
  * Created by XQS on 2017/10/3 0003.
  */
 
-public class MsgAdapter extends RecycleListView.Adapter<MsgAdapter.ViewHolder> {
+public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     private List<Msg>mMsgList;
-    static class ViewHolder extends RecycleListView.ViewHolder
+    static class ViewHolder extends RecyclerView.ViewHolder
     {
         LinearLayout leftLayout;
         LinearLayout rightLayout;
