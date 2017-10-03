@@ -1,9 +1,11 @@
 package com.example.shengsheng.uibestpractice;
 
-import android.support.v7.app.RecyclerView;
+//import android.support.v7.app.RecyclerView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Msg>msgList=new ArrayList<>();
     private EditText inputText;
     private Button send;
-    private RecyclerView.msgRecycleView;
+    private RecyclerView msgRecyclerView;
     private MsgAdapter adapter;
 
     @Override
@@ -35,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 String content=inputText.getText().toString();
-                if(!"".equal(content))
+                if(!"".equals(content))
                 {
                     Msg msg=new Msg(content,Msg.TYPE_SENT);
                     msgList.add(msg);
                     adapter.notifyItemInserted(msgList.size()-1);
                     //当有新消息时刷新ListView中显示的内容
-                    msgRecyclerView.sorollToPosition(msgList.size()-1);
+                    msgRecyclerView.scrollToPosition(msgList.size()-1);
                     //将ListView定位到最后一行
                     inputText.setText("");//清空输入框中的内容
                 }
