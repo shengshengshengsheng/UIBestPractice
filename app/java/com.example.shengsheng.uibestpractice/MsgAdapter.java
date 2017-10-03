@@ -1,8 +1,8 @@
 package com.example.shengsheng.uibestpractice;
 
 import android.support.constraint.solver.LinearSystem;
-import android.support.v7.app.RecyclerView;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -14,7 +14,7 @@ import java.util.List;
  * Created by XQS on 2017/10/3 0003.
  */
 
-public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
+public  class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     private List<Msg>mMsgList;
     static class ViewHolder extends RecyclerView.ViewHolder
     {
@@ -38,7 +38,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     @Override
     public ViewHolder onCretaeViewHolder(ViewGroup parent,int viewType)
     {
-        View view LayoutInflater.from(parent.getContext()).inflate(R.layout.msg_item,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.msg_item,parent,false);
         return new ViewHolder(view);
     }
     @Override
