@@ -1,6 +1,6 @@
 package com.example.shengsheng.uibestpractice;
 
-import android.support.v7.app.AlertController.RecycleListView;
+import android.support.v7.app.RecyclerView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Msg>msgList=new ArrayList<>();
     private EditText inputText;
     private Button send;
-    private RecycleListView.msgRecycleView;
+    private RecyclerView.msgRecycleView;
     private MsgAdapter adapter;
 
     @Override
@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         initMsg();
         inputText=(EditText)findViewById(R.id.input_text);
         send=(Button)findViewById(R.id.send);
-        msgRecyclerView=(RecycleListView)findViewById(R.id.msg_recycler_view);
+        msgRecyclerView=(RecyclerView)findViewById(R.id.msg_recycler_view);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-        msgRecycleView.setLayoutManager(layoutManager);
+        msgRecyclerView.setLayoutManager(layoutManager);
         adapter=new MsgAdapter(msgList);
         msgRecyclerView.setAdapter(adapter);
         send.setOnClickListener(new View.OnClickListener()
